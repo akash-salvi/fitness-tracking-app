@@ -65,12 +65,12 @@ const AchievementsModal = ({ data: { streak, theme, isDarkMode, setShowAchieveme
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm`}
+      className={`fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-2`}
     >
       <div
-        className={`${theme.cardBg} ${theme.text} p-6 rounded-xl max-w-lg w-full ${theme.shadow} max-h-[90vh] overflow-y-auto animate-fade-in-scale`}
+        className={`${theme.cardBg} ${theme.text} p-6 pt-0 rounded-xl max-w-lg w-full ${theme.shadow} max-h-[90vh] overflow-y-auto animate-fade-in-scale`}
       >
-        <div className="flex justify-between items-center mb-6 sticky top-0 bg-inherit pt-2 pb-4 -mt-2 z-10">
+        <div className="flex justify-between items-center mb-6 sticky top-0 bg-inherit pt-6 pb-4 -mt-2 z-10">
           <h3 className="text-xl font-bold">Your Achievements</h3>
           <button
             onClick={() => setShowAchievements(false)}

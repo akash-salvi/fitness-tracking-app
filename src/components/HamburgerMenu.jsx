@@ -5,19 +5,19 @@ const HamburgerMenu = ({
   data: { theme, isDarkMode, setShowProfile, setIsMenuOpen, setShowAchievements, toggleDarkMode },
 }) => (
   <div
-    className={`absolute left-0 top-16 w-64 ${theme.cardBg} ${theme.shadow} rounded-lg overflow-hidden z-30 border ${theme.border} animate-slide-in-left md:hidden`}
+    className={`absolute left-0 top-16 w-64 ${theme.cardBg} ${theme.shadow} rounded-lg overflow-hidden z-30 ml-8 mt-4 border ${theme.menuBorder} animate-slide-in-left md:hidden`}
   >
-    <div className="p-4 border-b border-gray-200">
+    <div className={`p-4 border-b ${theme.border}`}>
       <div className="flex items-center space-x-3">
         <div
           className={`${
             isDarkMode ? "bg-blue-600" : "bg-blue-500"
           } h-10 w-10 rounded-full flex items-center justify-center text-white font-bold`}
         >
-          AC
+          S
         </div>
         <div>
-          <h3 className={`font-medium ${theme.text}`}>Alex Chen</h3>
+          <h3 className={`font-medium ${theme.text}`}>Shaggy</h3>
           <p className={`text-xs ${theme.subText}`}>Premium Member ✨</p>
         </div>
       </div>

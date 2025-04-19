@@ -148,6 +148,7 @@ export default function FitnessFreak() {
         text: "text-gray-100",
         subText: "text-gray-300",
         border: "border-gray-700",
+        menuBorder: "border-gray-400",
         accent: "text-blue-400",
         success: "text-green-400",
         warning: "text-yellow-400",
@@ -172,6 +173,7 @@ export default function FitnessFreak() {
         text: "text-gray-800",
         subText: "text-gray-500",
         border: "border-gray-200",
+        menuBorder: "border-gray-200",
         accent: "text-blue-600",
         success: "text-green-600",
         warning: "text-yellow-500",
@@ -329,11 +331,11 @@ export default function FitnessFreak() {
             <div
               className={`${
                 isDarkMode ? "bg-blue-600" : "bg-blue-500"
-              } p-2 rounded-lg text-white shadow-md`}
+              } p-2 rounded-lg text-white shadow-md md:block hidden`}
             >
               <Activity size={24} />
             </div>
-            <h1 className={`text-xl md:text-2xl font-bold ${theme.text}`}>FitnessFreak Dashboard</h1>
+            <h1 className={`text-xl md:text-2xl font-bold ${theme.text}`}>FitnessFreak</h1>
           </div>
           <div className="flex items-center space-x-2 md:space-x-3">
             <div className="relative">
@@ -473,7 +475,7 @@ export default function FitnessFreak() {
           </div>
         </div>
         {/* Navigation Tabs */}
-        <div className={`flex border-b ${theme.border} mb-6 overflow-x-auto scrollbar-hide`}>
+        <div className={`flex border-b ${theme.border} mb-6 overflow-x-auto overflow-y-clip scrollbar-hide`}>
           {["overview", "goals", "workouts", "nutrition", "sleep", "history"].map((tab) => (
             <button
               key={tab}
